@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="signup-container">
+    <h2>Sign Up</h2>
+    <p>It's free and always will be.</p>
+    <form>
+      <div class="name-fields">
+        <input type="text" placeholder="First Name" required>
+        <input type="text" placeholder="Last Name" required>
+      </div>
+      <input type="email" placeholder="Your email address" required>
+      <input type="email" placeholder="Re-enter email address" required>
+      <input type="password" placeholder="New Password" required>
+
+      <label>Birthday</label>
+      <div class="birthday">
+        <select required>
+          <option disabled selected>Day</option>
+          <!-- Day options -->
+          <script>
+            for(let i=1; i<=31; i++) {
+              document.write(`<option>${i}</option>`);
+            }
+          </script>
+        </select>
+        <select required>
+          <option disabled selected>Month</option>
+          <option>Jan</option>
+          <option>Feb</option>
+          <option>Mar</option>
+          <option>Apr</option>
+          <option>May</option>
+          <option>Jun</option>
+          <option>Jul</option>
+          <option>Aug</option>
+          <option>Sep</option>
+          <option>Oct</option>
+          <option>Nov</option>
+          <option>Dec</option>
+        </select>
+        <select required>
+          <option disabled selected>Year</option>
+          <script>
+            for(let i=2025; i>=1900; i--) {
+              document.write(`<option>${i}</option>`);
+            }
+          </script>
+        </select>
+      </div>
+
+      <div class="gender">
+        <label><input type="radio" name="gender" required> Female</label>
+        <label><input type="radio" name="gender" required> Male</label>
+      </div>
+
+      <p class="terms">
+        By clicking Sign Up, you agree to our Terms and that you have read our Data Use Policy, including our Cookie Use.
+      </p>
+
+      <button type="submit" class="signup-btn">Sign Up</button>
+    </form>
+  </div>
+</body>
+</html>
